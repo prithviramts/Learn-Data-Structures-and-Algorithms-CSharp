@@ -17,9 +17,18 @@ namespace SortingAlgorithms
             Sort.BubbleSortDesc(new int[] { 5, 10, -1, 3, 5, 10 });
             // SelectionSort
             Sort.SelectionSort(new int[] { 5, 10, -1, 3, 5, 10 });
+            // InsertionSort
+            Sort.InsertionSort(new int[] { 5, 10, -1, 3, 5, 10 });
+
+            // Recursion
+            Recursion.RecursiveFactorial(5);
+            Recursion.IterativeFactorial(7);
+            Console.WriteLine(Recursion.SumOfArrayWORecursion(new int[] { 1, 2, 3, 4 }, 2));
+            Recursion.SumOfArrayWRecursion(new int[] { 1, 2, 3, 4 }, 2);
+            Recursion.IsSorted(new int[] { 4, 1, 3, 2 }, 0);
 
             // LeetCode Solver
-            RunningSumOf1DArray.RunningSum(new int[] { 1, 2, 3, 4, 5, });
+            LeetCodeSolver.RunningSum(new int[] { 1, 2, 3, 4, 5, });
         }
     }
 }

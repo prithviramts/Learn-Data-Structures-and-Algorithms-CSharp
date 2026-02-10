@@ -32,7 +32,7 @@
 
         public static void SelectionSort(int[] array)
         {
-            for (int partIndex = array.Length - 1; partIndex > 0; partIndex-- )
+            for (int partIndex = array.Length - 1; partIndex > 0; partIndex--)
             {
                 int LargestAt = 0;
                 for (int i = 1; i <= partIndex; i++)
@@ -48,7 +48,7 @@
 
         public static void InsertionSort(int[] array)
         {
-            for(int partIndex = 1; partIndex < array.Length; partIndex++)
+            for (int partIndex = 1; partIndex < array.Length; partIndex++)
             {
                 int curUnsorted = array[partIndex];
                 int i = 0;
@@ -60,33 +60,15 @@
             }
         }
 
-        private static void Swap(int[] array, int i, int j) 
+        private static void Swap(int[] array, int i, int j)
         {
             if (i == j)
             {
                 return;
-            }   
+            }
             int temp = array[i];
             array[i] = array[j];
             array[j] = temp;
         }
-    }
-
-    // LEET CODE 1480
-    public class RunningSumOf1DArray
-    {
-        public static int[] RunningSum(int[] nums)
-        {
-            int[] output = new int[nums.Length];
-
-            int number = 0;
-            for (int i = 0; i < nums.Length; i++)
-            {
-                number = number + nums[i];
-                output[i] = number;
-            }
-            Console.WriteLine(output);
-            return output; 
-        }
-    }
+    }    
 }
