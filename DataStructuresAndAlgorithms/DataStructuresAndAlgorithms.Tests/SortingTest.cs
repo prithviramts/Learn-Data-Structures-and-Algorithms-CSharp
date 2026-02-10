@@ -46,7 +46,19 @@ namespace DataStructuresAndAlgorithms.Tests
         [Test]
         public void BubbleSort_ValidInput_Sorted()
         {
-            RunTestsForSortAlgorithm(Sort.BubbleSort);
+            RunTestsForSortAlgorithm(Sort.BubbleSortAsc);
+        }
+
+        [Test]
+        public void SelectionSort_ValidInput_Sorted()
+        {
+            RunTestsForSortAlgorithm(Sort.SelectionSort);
+        }
+
+        [Test]
+        public void InsertionSort_ValidInput_Sorted()
+        {
+            RunTestsForSortAlgorithm(Sort.InsertionSort);
         }
     }
 }
