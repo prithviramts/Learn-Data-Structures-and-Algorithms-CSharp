@@ -23,12 +23,16 @@ namespace SortingAlgorithms
             // Recursion
             Recursion.RecursiveFactorial(5);
             Recursion.IterativeFactorial(7);
-            Console.WriteLine(Recursion.SumOfArrayWORecursion(new int[] { 1, 2, 3, 4 }, 2));
+            Recursion.SumOfArrayWORecursion(new int[] { 1, 2, 3, 4 }, 2);
             Recursion.SumOfArrayWRecursion(new int[] { 1, 2, 3, 4 }, 2);
             Recursion.IsSorted(new int[] { 4, 1, 3, 2 }, 0);
 
             // LeetCode Solver
             LeetCodeSolver.RunningSum(new int[] { 1, 2, 3, 4, 5, });
+            LeetCodeSolver.RichestCustomerWealth(new int[][] { new int[] {1, 2, 3}, new int[] {4, 5}, new int[] {6, 7, 8}});
+            LeetCodeSolver.RichestCustomerWealthForLoop(new int[][] { new int[] { 1, 2, 3 }, new int[] { 4, 5 }, new int[] { 6, 7, 8 } });
+            Console.WriteLine(LeetCodeSolver.FizzBuzz(20));
+            Console.WriteLine(LeetCodeSolver.FizzBuzzStr(15));
         }
     }
 }
