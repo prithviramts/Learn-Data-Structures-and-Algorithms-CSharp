@@ -31,8 +31,10 @@ namespace SortingAlgorithms
             LeetCodeSolver.RunningSum(new int[] { 1, 2, 3, 4, 5, });
             LeetCodeSolver.RichestCustomerWealth(new int[][] { new int[] {1, 2, 3}, new int[] {4, 5}, new int[] {6, 7, 8}});
             LeetCodeSolver.RichestCustomerWealthForLoop(new int[][] { new int[] { 1, 2, 3 }, new int[] { 4, 5 }, new int[] { 6, 7, 8 } });
-            Console.WriteLine(LeetCodeSolver.FizzBuzz(20));
-            Console.WriteLine(LeetCodeSolver.FizzBuzzStr(15));
+            LeetCodeSolver.FizzBuzz(20);
+            LeetCodeSolver.FizzBuzzStr(15);
+
+            Console.WriteLine(LeetCodeSolver.NumberOfSteps(0));
         }
     }
 }

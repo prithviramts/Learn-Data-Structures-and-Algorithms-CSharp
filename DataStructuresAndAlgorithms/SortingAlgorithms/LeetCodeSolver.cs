@@ -123,5 +123,33 @@ namespace SortingAlgorithms
         }
 
         #endregion
+
+        #region LEET CODE - 1342
+
+        public static int NumberOfSteps(int num)
+        {
+            int counter = 0;
+            int oriNum = num;
+            for (int i = 0; i < oriNum; i++)
+            {
+                if (num % 2 == 0)
+                {
+                    num = num / 2;
+                    counter++;
+                }
+                if (num % 2 == 1)
+                {
+                    num = num - 1;
+                    counter++;
+                }
+                if (num == 0)
+                {
+                    break;
+                }
+            }
+            return counter;
+        }
+
+        #endregion
     }
 }
