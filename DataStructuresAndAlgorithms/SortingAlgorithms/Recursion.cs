@@ -73,7 +73,7 @@ namespace SortingAlgorithms
         // Check array is sorted or not using recursion
         public static bool IsSorted(int[] array, int index)
         {
-            if (index >= array.Length)
+            if (index >= array.Length - 1)
             {
                 return false;
             }

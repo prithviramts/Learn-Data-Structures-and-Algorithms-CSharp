@@ -28,7 +28,7 @@ namespace DataStructuresAndAlgorithms.Tests
             foreach(var sample in Samples())
             {
                 sort(sample);
-                //CollectionAssert.IsOrdered(sample);
+                CollectionAssert.IsOrdered(sample);
                 PrintOut(sample);
             }
         }
@@ -59,6 +59,20 @@ namespace DataStructuresAndAlgorithms.Tests
         public void InsertionSort_ValidInput_Sorted()
         {
             RunTestsForSortAlgorithm(Sort.InsertionSort);
+        }
+
+        [Test]
+        public void MergeSort_ValidInput_Sorted()
+        {
+            RunTestsForSortAlgorithm(Sort.MergeSort_EngSpock);
+            RunTestsForSortAlgorithm(Sort.MergeSort_BroCode);
+        }
+
+        [Test]
+        public void QuickSort_ValidInput_Sorted()
+        {
+            RunTestsForSortAlgorithm(Sort.QuickSort_EngSpock);
+            RunTestsForSortAlgorithm(Sort.QuickSort_BroCode);
         }
     }
 }
