@@ -196,5 +196,59 @@ namespace SortingAlgorithms
         }
 
         #endregion
+
+        #region LEET CODE - 1
+
+        // Adjacent values will only be checked here. 
+        public static int[] TwoSum_AdjacentOnly(int[] nums, int target)
+        {
+            int[] res = new int[2];
+
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                if (nums[i] + nums[i + 1] == target)
+                {
+                    res[i] = nums[i];
+                    res[i + 1] = nums[i + 1];
+                }
+            }
+
+            return res;
+        }
+
+        public static int[] TwoSum(int[] nums, int target)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for(int j = i + 1; j < nums.Length; j++ )
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        return new int[] { i, j };
+                    }
+                }
+            }
+
+            return new int[] { 0, 0 };
+        }
+
+        #endregion
+
+        #region LEET CODE - 9
+
+        public static bool IsPalindrome(int x)
+        {
+            int res = 0;
+            while (x > 0)
+            {
+                res = (res * 10) + (x % 10);
+                x /= 10;
+            }
+            if (res == x) return true;
+            else
+                return false;
+        }
+
+        #endregion
     }
 }
