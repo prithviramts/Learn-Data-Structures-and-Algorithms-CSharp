@@ -49,6 +49,8 @@ namespace SortingAlgorithms
 
             LeetCodeSolver.TwoSum(new int[] { 3 , 3 }, 6);
             LeetCodeSolver.IsPalindrome(-121);
+
+            LeetCodeSolver.SingleNumber(new int[] { 4, 1, 2, 4, 2 });
         }
     }
 }
