@@ -265,5 +265,99 @@ namespace SortingAlgorithms
         }
 
         #endregion
+
+        #region LEETCODE - 121 Best Time to Buy and Sell Stock
+
+        public static int MaxProfit(int[] prices)
+        {
+            int minPrice = int.MaxValue;
+            int maxprofit = 0;
+
+            for (int i = 0; i < prices.Length; i++)
+            {
+                if (prices[i] < minPrice)
+                {
+                    minPrice = prices[i];
+                }
+                else
+                {
+                    int profit = prices[i] - minPrice;
+                    if (profit >  maxprofit)
+                        maxprofit = profit;
+                }
+            }
+            return maxprofit;
+        }
+
+        #endregion
+
+        #region LEETCODE - 217 Contain Duplicate
+
+        public static bool ContainsDuplicate(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[j] == nums[i])
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool ContainsDuplicateWithHash(int[] nums)
+        {
+            HashSet<int> Seen = new HashSet<int>();
+
+            foreach(int i in nums)
+            {
+                if (Seen.Contains(i)) return true;
+
+                Seen.Add(i);
+            }
+            return false;
+        }
+
+        #endregion
+
+        #region LEETCODE - 283 Move Zeros
+
+        public static void MoveZeros(int[] nums)
+        {
+            for (int i = 0;i < nums.Length;i++)
+            {
+                for (int j = 0; j < nums.Length;j++)
+                {
+                    if (nums[j] == 0)
+                    {
+                        int temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                    }
+                }
+            }
+        }
+
+        public static void MoveZerosOptimalSoln(int[] nums)
+        {
+            int arrPos = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] != 0)
+                {
+                    nums[arrPos] = nums[i];
+                    arrPos++;
+                }
+            }
+
+            for (int i = arrPos; i < nums.Length; i++)
+            {
+                nums[i] = 0;
+            }
+
+        }
+
+        #endregion
     }
 }

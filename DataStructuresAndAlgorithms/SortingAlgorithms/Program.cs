@@ -51,6 +51,9 @@ namespace SortingAlgorithms
             LeetCodeSolver.IsPalindrome(-121);
 
             LeetCodeSolver.SingleNumber(new int[] { 4, 1, 2, 4, 2 });
+            LeetCodeSolver.MaxProfit(new int[] { 7, 3, 1, 5, 8, 6 });
+            LeetCodeSolver.ContainsDuplicate(new int[] { 7, 3, 1, 5, 8, 6, });
+            LeetCodeSolver.MoveZeros(new int[] { 1, 0, 2, 3, 0, 12, 0, 3 });
         }
     }
 }
