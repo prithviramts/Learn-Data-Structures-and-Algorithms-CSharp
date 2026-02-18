@@ -6,7 +6,7 @@ namespace SortingAlgorithms
 {
     public class LeetCodeSolver
     {
-        #region LEET CODE - 1480
+        #region LEET CODE - 1480 Running Sum
         public static int[] RunningSum(int[] nums)
         {
             int[] output = new int[nums.Length];
@@ -22,7 +22,7 @@ namespace SortingAlgorithms
         }
         #endregion
         
-        #region LEET CODE - 1672
+        #region LEET CODE - 1672 Richest Customer Wealth
         // with foreach loop
         public static int RichestCustomerWealth(int[][] accounts)
         {
@@ -66,7 +66,7 @@ namespace SortingAlgorithms
         }
         #endregion
 
-        #region LEET CODE - 412
+        #region LEET CODE - 412 FizzBuzz
 
         // This is what I thought of doing, when I proposed with this leet code problem.
         // There is an another way, where we can skip checking both 3 and 5 and concat the string. 
@@ -124,7 +124,7 @@ namespace SortingAlgorithms
 
         #endregion
 
-        #region LEET CODE - 1342
+        #region LEET CODE - 1342 Number Of Steps
 
         public static int NumberOfSteps(int num)
         {
@@ -152,7 +152,7 @@ namespace SortingAlgorithms
 
         #endregion
 
-        #region LEET CODE - 876
+        #region LEET CODE - 876 Build List
 
         public class ListNode
         {
@@ -197,7 +197,7 @@ namespace SortingAlgorithms
 
         #endregion
 
-        #region LEET CODE - 1
+        #region LEET CODE - 1 Two Sum
 
         // Adjacent values will only be checked here. 
         public static int[] TwoSum_AdjacentOnly(int[] nums, int target)
@@ -234,7 +234,7 @@ namespace SortingAlgorithms
 
         #endregion
 
-        #region LEET CODE - 9
+        #region LEET CODE - 9 Is Palindrome
 
         public static bool IsPalindrome(int x)
         {
@@ -359,5 +359,46 @@ namespace SortingAlgorithms
         }
 
         #endregion
+
+        #region LEETCODE 1295 Find Numbers with Even Numbers of Digit
+
+        public static int FindNumbers(int[] nums)
+        {
+            HashSet<int> result = new HashSet<int>();
+
+            return 0;
+        }
+
+        #endregion
+
+        // Finding missing number by sorting 
+        public static int MissingNumber(int[] nums)
+        {
+            int missNum = 0;
+            nums.Sort();
+            for (int i = 0; i<nums.Length; i++ )
+            {
+                if (nums[i] != i)
+                {
+                    missNum = i;
+                    break;
+                }
+            }
+            return missNum;
+        }
+
+        public static int MissingNumberMath(int[] nums)
+        {
+            int n = nums.Length;
+            int expectedSum = n * (n + 1) / 2;
+
+            int actualSum = 0;
+
+            for (int i = 0;i < n;i++)
+            {
+                actualSum += nums[i];
+            }
+            return expectedSum - actualSum;
+        }
     }
 }
