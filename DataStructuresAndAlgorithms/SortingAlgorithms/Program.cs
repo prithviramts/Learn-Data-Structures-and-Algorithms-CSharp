@@ -55,9 +55,19 @@ namespace SortingAlgorithms
             LeetCodeSolver.ContainsDuplicate(new int[] { 7, 3, 1, 5, 8, 6, });
             LeetCodeSolver.MoveZeros(new int[] { 1, 0, 2, 3, 0, 12, 0, 3 });
 
-            // Chatgpt probs
-            Console.WriteLine(LeetCodeSolver.MissingNumber(new int[] { 9, 1, 7, 3, 6, 2, 5, 0, 4 }));
-            Console.WriteLine(LeetCodeSolver.MissingNumberMath(new int[] { 9, 1, 7, 3, 6, 2, 5, 0, 4 }));
+            LeetCodeSolver.MissingNumber(new int[] { 9, 1, 7, 3, 6, 2, 5, 0, 4 });
+            LeetCodeSolver.MissingNumberMath(new int[] { 9, 1, 7, 3, 6, 2, 5, 0, 4 });
+
+            LeetCodeSolver.RemoveDups(new int[] { 0, 0, 1, 2, 2, 2, 3, 4, 4, 5, 5 });
+
+            LeetCodeSolver.PivotElement(new int[] { 1, 7, 3, 6, 5, 6 });
+            LeetCodeSolver.PivotElementWithoutDecRightSum(new int[] { 1, 7, 3, 6, 5, 6 });
+            LeetCodeSolver.SortedSquare(new int[] { -4, -1, 0, 3, 10 });
+            LeetCodeSolver.Merge(new int[] { 2, 3, 1, 0 , 0, 0 }, 3, new int[] { 2, 4, 6 }, 3);
+
+
+            // Hackerrank Probs
+            HackerrankSEPrep.countRespTimeReg([100, 200, 150, 300]);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace SortingAlgorithms
@@ -371,6 +372,8 @@ namespace SortingAlgorithms
 
         #endregion
 
+        #region LEETCODE - 268 Missing Number
+
         // Finding missing number by sorting 
         public static int MissingNumber(int[] nums)
         {
@@ -387,6 +390,8 @@ namespace SortingAlgorithms
             return missNum;
         }
 
+
+        // Take factorial of the nums.Length and add all the values in the nums array.
         public static int MissingNumberMath(int[] nums)
         {
             int n = nums.Length;
@@ -400,5 +405,119 @@ namespace SortingAlgorithms
             }
             return expectedSum - actualSum;
         }
+
+        #endregion
+
+        #region LEETCODE - 26 Remove Duplicates from Sorted Array
+
+        public static int RemoveDups(int[] nums)
+        {
+            int[] uniEle = new int[nums.Length];
+            int UniqueVal = 0;
+            int i = 0;
+            for (int j = 1; j < nums.Length; j++)
+            {
+                if (nums[i] != nums[j])
+                {
+                    i++;
+                    uniEle[i] = nums[j];
+                    nums[i] = nums[j];
+                    UniqueVal++;
+                }
+            }
+            return i+1 | UniqueVal;
+        }
+
+        #endregion
+
+        #region LEETCODE - 724 Find Pivot Index
+
+        public static int PivotElement(int[] nums)
+        {
+            int totSum = 0;
+            foreach (int num in nums)
+            {
+                totSum += num;
+            }
+            int leftSum = 0;
+            int i = 0;
+            int rightSum = totSum - leftSum - nums[i];
+
+            for (i = 0; i < nums.Length;i++)
+            {
+                rightSum = totSum - leftSum - nums[i];
+                if (leftSum == rightSum)
+                {
+                    return nums[i];
+                }
+                else
+                {
+                    leftSum += nums[i];
+                }
+            }
+            return -1;
+        }
+
+        public static int PivotElementWithoutDecRightSum(int[] nums)
+        {
+            int totSum = 0;
+            foreach(int num in nums)
+            {
+                totSum += num;
+            }
+            int leftSum = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (leftSum == totSum - leftSum - nums[i])
+                    return i;
+
+                leftSum += nums[i];
+            }
+            return -1;
+        }
+
+        #endregion
+
+        #region - 
+
+        public static int[] SortedSquare(int[] nums)
+        {
+            int n = nums.Length;
+            int[] res = new int[n];
+
+            int left = 0; int right = n - 1; int pos = n - 1;
+
+            while (left <= right)
+            {
+                int l = nums[left] * nums[left];
+                int r = nums[right] * nums[right];
+
+                if (l > r) {
+                    res[pos--] = l;
+                    left++;
+                }
+                else
+                {
+                    res[pos--] = r;
+                    right--;
+                }
+            }
+            return res;
+            
+        }
+
+        #endregion
+
+        #region LEETCODE - 88 Merge Sorted Array
+
+        public static void Merge(int[] nums1, int n, int[] nums2, int m)
+        {
+            for (int i = n; i < nums1.Length;i++)
+            {
+                nums1[i] = nums2[i - n];
+            }
+        }
+
+        #endregion
     }
 }
