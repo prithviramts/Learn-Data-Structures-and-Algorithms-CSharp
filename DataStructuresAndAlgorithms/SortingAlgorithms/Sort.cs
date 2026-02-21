@@ -107,8 +107,8 @@ namespace SortingAlgorithms
                 if (high <= low) return;
                 
                 int mid = (low + high) / 2;
-                Sort(low, mid);
-                Sort(mid + 1, high);
+                Sort(low, mid); //l
+                Sort(mid + 1, high);  //r
                 Merge(low, mid, high);
             }
 

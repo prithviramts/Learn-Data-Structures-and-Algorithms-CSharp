@@ -22,14 +22,14 @@ namespace SortingAlgorithms
             return output;
         }
         #endregion
-        
+
         #region LEET CODE - 1672 Richest Customer Wealth
         // with foreach loop
         public static int RichestCustomerWealth(int[][] accounts)
         {
             int maxWealth = 0;
 
-            foreach(int[] account in accounts)
+            foreach (int[] account in accounts)
             {
                 int wealth = 0;
                 foreach (int money in account)
@@ -50,7 +50,7 @@ namespace SortingAlgorithms
         {
             int maxWealth = 0;
 
-            for(int i = 0; i < accounts.Length; i++)
+            for (int i = 0; i < accounts.Length; i++)
             {
                 int wealth = 0;
                 for (int j = 0; j < accounts[i].Length; j++)
@@ -221,7 +221,7 @@ namespace SortingAlgorithms
         {
             for (int i = 0; i < nums.Length; i++)
             {
-                for(int j = i + 1; j < nums.Length; j++ )
+                for (int j = i + 1; j < nums.Length; j++)
                 {
                     if (nums[i] + nums[j] == target)
                     {
@@ -283,7 +283,7 @@ namespace SortingAlgorithms
                 else
                 {
                     int profit = prices[i] - minPrice;
-                    if (profit >  maxprofit)
+                    if (profit > maxprofit)
                         maxprofit = profit;
                 }
             }
@@ -311,7 +311,7 @@ namespace SortingAlgorithms
         {
             HashSet<int> Seen = new HashSet<int>();
 
-            foreach(int i in nums)
+            foreach (int i in nums)
             {
                 if (Seen.Contains(i)) return true;
 
@@ -326,9 +326,9 @@ namespace SortingAlgorithms
 
         public static void MoveZeros(int[] nums)
         {
-            for (int i = 0;i < nums.Length;i++)
+            for (int i = 0; i < nums.Length; i++)
             {
-                for (int j = 0; j < nums.Length;j++)
+                for (int j = 0; j < nums.Length; j++)
                 {
                     if (nums[j] == 0)
                     {
@@ -379,7 +379,7 @@ namespace SortingAlgorithms
         {
             int missNum = 0;
             nums.Sort();
-            for (int i = 0; i<nums.Length; i++ )
+            for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] != i)
                 {
@@ -399,7 +399,7 @@ namespace SortingAlgorithms
 
             int actualSum = 0;
 
-            for (int i = 0;i < n;i++)
+            for (int i = 0; i < n; i++)
             {
                 actualSum += nums[i];
             }
@@ -425,7 +425,7 @@ namespace SortingAlgorithms
                     UniqueVal++;
                 }
             }
-            return i+1 | UniqueVal;
+            return i + 1 | UniqueVal;
         }
 
         #endregion
@@ -443,7 +443,7 @@ namespace SortingAlgorithms
             int i = 0;
             int rightSum = totSum - leftSum - nums[i];
 
-            for (i = 0; i < nums.Length;i++)
+            for (i = 0; i < nums.Length; i++)
             {
                 rightSum = totSum - leftSum - nums[i];
                 if (leftSum == rightSum)
@@ -461,7 +461,7 @@ namespace SortingAlgorithms
         public static int PivotElementWithoutDecRightSum(int[] nums)
         {
             int totSum = 0;
-            foreach(int num in nums)
+            foreach (int num in nums)
             {
                 totSum += num;
             }
@@ -478,7 +478,7 @@ namespace SortingAlgorithms
 
         #endregion
 
-        #region - 
+        #region LEETCODE - 977 Squares of the sorted array
 
         public static int[] SortedSquare(int[] nums)
         {
@@ -492,7 +492,8 @@ namespace SortingAlgorithms
                 int l = nums[left] * nums[left];
                 int r = nums[right] * nums[right];
 
-                if (l > r) {
+                if (l > r)
+                {
                     res[pos--] = l;
                     left++;
                 }
@@ -503,7 +504,7 @@ namespace SortingAlgorithms
                 }
             }
             return res;
-            
+
         }
 
         #endregion
@@ -512,10 +513,65 @@ namespace SortingAlgorithms
 
         public static void Merge(int[] nums1, int n, int[] nums2, int m)
         {
-            for (int i = n; i < nums1.Length;i++)
+            for (int i = n; i < nums1.Length; i++)
             {
                 nums1[i] = nums2[i - n];
             }
+
+            for (int i = 0; i < nums1.Length; i++)
+            {
+                for (int j = 0; j < nums1.Length; j++)
+                {
+                    if (nums1[i] < nums1[j])
+                    {
+                        int temp = nums1[i];
+                        nums1[i] = nums1[j];
+                        nums1[j] = temp;
+                    }
+                }
+            }
+        }
+
+        public static void MergeOpt(int[] nums1, int n, int[] nums2, int m)
+        {
+            int i = n - 1;
+            int j = m - 1;
+            int k = n + m - 1;
+
+            while (j >= 0)
+            {
+                if (i >= 0 && nums1[i] > nums2[j])
+                {
+                    nums1[k] = nums1[i];
+                    i--;
+                }
+                else
+                {
+                    nums1[k] = nums2[j];
+                    j--;
+                }
+                k--;
+
+            }
+        }
+
+        #endregion
+
+        #region Product of Array Itself
+
+        public static int[] ProductExceptSelf(int[] nums)
+        {
+            int[] answer = new int[nums.Length];
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (i == 0)
+                {
+                    answer[0] = nums[i++] * nums[nums.Length - 1];
+                }
+            }
+
+            return answer;
         }
 
         #endregion
