@@ -575,5 +575,27 @@ namespace SortingAlgorithms
         }
 
         #endregion
+
+        #region LEETCODE - 41 First Missing Positive
+
+
+        // I'll start with a foreach loop, and inside the foreach loop, I'll go through condition 
+        // If (num == 
+        public static int FirstMissingPositive(int[] nums)
+        {
+            int missingNum = 0;
+            HashSet<int> res = new HashSet<int>();
+            foreach (int num in nums)
+            {
+                if ()
+                {
+                    res.Add(num);
+                }
+                missingNum = num;
+            }
+            return missingNum;
+        }
+
+        #endregion
     }
 }
