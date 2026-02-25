@@ -557,18 +557,16 @@ namespace SortingAlgorithms
 
         #endregion
 
-        #region Product of Array Itself
+        #region LEETCODE - 238 Product of Array Itself
 
         public static int[] ProductExceptSelf(int[] nums)
         {
             int[] answer = new int[nums.Length];
+            int leftProd = 0, rightProd = 0;
 
             for (int i = 0; i < nums.Length; i++)
             {
-                if (i == 0)
-                {
-                    answer[0] = nums[i++] * nums[nums.Length - 1];
-                }
+                leftProd *= nums[i];
             }
 
             return answer;
@@ -587,13 +585,159 @@ namespace SortingAlgorithms
             HashSet<int> res = new HashSet<int>();
             foreach (int num in nums)
             {
-                if ()
-                {
-                    res.Add(num);
-                }
+                //if ()
+                //{
+                //    res.Add(num);
+                //}
                 missingNum = num;
             }
             return missingNum;
+        }
+
+        #endregion
+
+        #region LEETCODE - 14 Longest Common Prefix
+
+        public static string LongestCommonPrefix(string[] strs)
+        {
+            for (int i = 0; i < strs.Length; i++)
+            {
+                //if (strs[i] == strs[i+1])
+                //{
+                //    return strs[i];
+                //}
+            }
+
+            return "";
+        }
+
+        #endregion
+
+        #region LEETCODE - 27 Remove Element
+
+
+        // Over complicated Noob solution
+        public static int RemoveElement(int[] nums, int val)
+        {
+            int n = nums.Length;
+            int wall = n - 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (i < wall)
+                {
+                    if (nums[i] == val)
+                    {
+                        if (nums[wall] == val)
+                        {
+                            int tempI = nums[wall - 1];
+                            nums[wall - 1] = nums[i];
+                            nums[i] = tempI;
+                        }
+                        else
+                        {
+                            int temp = nums[wall];
+                            nums[wall] = nums[i];
+                            nums[i] = temp;
+                        }
+                        wall--;
+                    }
+                }
+            }
+            return wall;
+        }
+
+        // Optimal solution
+        public static int RemoveElementOpt(int[] nums, int val)
+        {
+            int n = nums.Length;
+            int i = 0;
+            while (i < n)
+            {
+                if (nums[i] == val)
+                {
+                    nums[i] = nums[n - 1];
+                    n--;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return n;
+        }
+
+        #endregion
+
+        #region LEETCODE - 35 Search Insert Position
+
+        public static int SearchInsert(int[] nums, int target)
+        {
+            int n = nums.Length;
+            int count = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (nums[i] < target)
+                {
+                    count++;
+                }
+            }
+            return count;
+
+        }
+
+        #endregion
+
+        #region LEETCODE - 66 Plus One
+
+        // this will work for small int value, even long can't give the values more than 999999999. so below solution is optimal
+        public static int[] PlusOne(int[] digits)
+        {
+            int digLen = digits.Length;
+            int wholeNum = 0;
+            List<int> resList = new List<int>();
+            for (int i = 0; i < digLen; i++)
+            {
+                wholeNum = wholeNum * 10 + digits[i];
+            }
+            wholeNum++;
+
+            while (wholeNum >= 1)
+            {
+                int dig = 0;
+                dig = wholeNum % 10;
+                wholeNum /= 10;
+                resList.Add(dig);
+            }
+
+            int[] resArr = resList.ToArray();
+            int len = resArr.Length - 1;
+            for (int i = 0; i <= len; i++)
+            {
+                int temp = resArr[i];
+                resArr[i] = resArr[len];
+                resArr[len] = temp;
+                len--;
+            }
+            
+            return resArr;
+        }
+
+        public static int[] PlusOneOpt(int[] digits)
+        {
+            for (int i = digits.Length - 1; i >= 0; i--)
+            {
+                if (digits[i] < 9)
+                {
+                    digits[i]++;
+                    return digits;
+                }
+                digits[i] = 0;
+            }
+
+            int[] result = new int[digits.Length + 1];
+            result[0] = 1;
+            return result;
         }
 
         #endregion

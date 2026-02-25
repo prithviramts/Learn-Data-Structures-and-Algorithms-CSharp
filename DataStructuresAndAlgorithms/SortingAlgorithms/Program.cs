@@ -64,7 +64,15 @@ namespace SortingAlgorithms
             LeetCodeSolver.PivotElementWithoutDecRightSum(new int[] { 1, 7, 3, 6, 5, 6 });
             LeetCodeSolver.SortedSquare(new int[] { -4, -1, 0, 3, 10 });
             LeetCodeSolver.Merge(new int[] { 2, 3, 1, 0 , 0, 0 }, 3, new int[] { 2, 4, 6 }, 3);
+            LeetCodeSolver.ProductExceptSelf(new int[] { 1, 2, 3, 4, 5 });
+            LeetCodeSolver.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
 
+            LeetCodeSolver.RemoveElement(new int[] { 2 }, 3);
+            LeetCodeSolver.RemoveElementOpt(new int[] {3, 3}, 3 );
+
+            LeetCodeSolver.SearchInsert(new int[] { 1, 3, 5, 6 }, 5);
+            LeetCodeSolver.PlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
+            LeetCodeSolver.PlusOneOpt(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 
             // Hackerrank Probs
             HackerrankSEPrep.countRespTimeReg([100, 200, 150, 300]);
