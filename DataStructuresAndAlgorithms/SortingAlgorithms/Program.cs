@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SortingAlgorithms.LeetCodeQuest.Array1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace SortingAlgorithms
             // Learning DSA
             int[] input = new int[] { 9, 10, -1, 3, 4, 3, 5, 1 };
 
+            #region Sorting
+
             // BubbleSort
             Sort.BubbleSortAsc(input);
             Sort.BubbleSortDesc(input);
@@ -28,12 +31,20 @@ namespace SortingAlgorithms
             Sort.QuickSort_EngSpock(input);
             Sort.QuickSort_BroCode(input);
 
+            #endregion
+
+            #region Recursion
+
             // Recursion
             Recursion.RecursiveFactorial(5);
             Recursion.IterativeFactorial(7);
             Recursion.SumOfArrayWORecursion(input, 2);
             Recursion.SumOfArrayWRecursion(input, 2);
             Recursion.IsSorted(input, 0);
+
+            #endregion
+
+            #region LeetCode Solver
 
             // LeetCode Solver
             LeetCodeSolver.RunningSum(input);
@@ -74,8 +85,26 @@ namespace SortingAlgorithms
             LeetCodeSolver.PlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
             LeetCodeSolver.PlusOneOpt(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 
+            #endregion
+
+            #region Hackerrank Probs
+
             // Hackerrank Probs
             HackerrankSEPrep.countRespTimeReg([100, 200, 150, 300]);
+
+            #endregion
+
+            #region LeetCode Quest - Array
+
+            QuestArrayI.GetConcatenation(new int[] { 1, 2, 3 });
+
+            QuestArrayI.shuffle(new int[] { 2, 5, 1, 3, 4, 7 }, 3);
+
+            QuestArrayI.FindMaxConsecutiveOnes(new int[] { 0 });
+
+            QuestArrayI.FindMaxConsecutiveOnesOpt(new int[] { 1, 1, 0, 1, 1, 1 });
+
+            #endregion
         }
     }
 }

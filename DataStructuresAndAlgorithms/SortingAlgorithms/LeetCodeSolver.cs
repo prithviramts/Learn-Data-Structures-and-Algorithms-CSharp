@@ -563,10 +563,13 @@ namespace SortingAlgorithms
         {
             int[] answer = new int[nums.Length];
             int leftProd = 0, rightProd = 0;
-
-            for (int i = 0; i < nums.Length; i++)
+            int i = 0;
+            if (nums[i] > 0)
             {
-                leftProd *= nums[i];
+                for (; i < nums.Length; i++)
+                {
+                    leftProd *= nums[i];
+                }
             }
 
             return answer;
