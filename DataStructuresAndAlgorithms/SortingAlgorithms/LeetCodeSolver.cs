@@ -233,6 +233,26 @@ namespace SortingAlgorithms
             return new int[] { 0, 0 };
         }
 
+        public static int[] TwoSumHash(int[] nums, int target)
+        {
+            Dictionary<int, int> Duplicates = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int expSum = target - nums[i];
+
+                if (Duplicates.ContainsKey(expSum))
+                {
+                    return new int[] { expSum, nums[i] };
+                }
+                if (!Duplicates.ContainsKey(nums[i]))
+                {
+                    Duplicates.Add(nums[i], i);
+                }
+            }
+            return new int[] { 0, 0 };
+        }
+
         #endregion
 
         #region LEET CODE - 9 Is Palindrome
@@ -741,6 +761,36 @@ namespace SortingAlgorithms
             int[] result = new int[digits.Length + 1];
             result[0] = 1;
             return result;
+        }
+
+        #endregion
+
+        #region LEETCODE - 387 First Unique Character in a String 
+
+        public static int FirstUniqChar(string s)
+        {
+
+            return -1;
+        }
+
+        #endregion
+
+        #region LEETCODE - 219 Contains Duplicate II
+
+        public static bool ContainsNearbyDuplicate(int[] nums, int k)
+        {
+            Dictionary<int, int> Duplicates = new Dictionary<int, int>();
+            Duplicates.Add(nums[0], 0);
+            for (int i = 1; i <= nums[(i + 1) - k]; i++)
+            {
+                if (Duplicates.ContainsKey(nums[i]) == Duplicates.ContainsKey(nums[0]) )
+                {
+                    return true;
+                }
+            }
+
+
+            return false;
         }
 
         #endregion

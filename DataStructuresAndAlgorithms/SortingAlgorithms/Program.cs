@@ -59,6 +59,7 @@ namespace SortingAlgorithms
             LeetCodeSolver.MiddleNote(head);
 
             LeetCodeSolver.TwoSum(new int[] { 3, 3 }, 6);
+            LeetCodeSolver.TwoSumHash(new int[] { 2, 7, 8, 9 }, 9);
             LeetCodeSolver.IsPalindrome(-121);
 
             LeetCodeSolver.SingleNumber(new int[] { 4, 1, 2, 4, 2 });
@@ -84,6 +85,8 @@ namespace SortingAlgorithms
             LeetCodeSolver.SearchInsert(new int[] { 1, 3, 5, 6 }, 5);
             LeetCodeSolver.PlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
             LeetCodeSolver.PlusOneOpt(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
+
+            LeetCodeSolver.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1, 2, 3 }, 2);
 
             #endregion
 
