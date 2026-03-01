@@ -108,6 +108,13 @@ namespace SortingAlgorithms
             QuestArrayI.FindMaxConsecutiveOnesOpt(new int[] { 1, 1, 0, 1, 1, 1 });
 
             #endregion
+
+            #region CodeChef Solver
+
+            CodeChefSolver.SearchEleOfArray();
+
+
+            #endregion
         }
     }
 }

@@ -781,10 +781,11 @@ namespace SortingAlgorithms
         {
             Dictionary<int, int> Duplicates = new Dictionary<int, int>();
             Duplicates.Add(nums[0], 0);
-            for (int i = 1; i <= nums[(i + 1) - k]; i++)
+            for (int i = 1; i <= k; i++)
             {
-                if (Duplicates.ContainsKey(nums[i]) == Duplicates.ContainsKey(nums[0]) )
+                if (Duplicates.ContainsKey(nums[i]) == Duplicates.ContainsKey(nums[0]))
                 {
+                    if ()
                     return true;
                 }
             }
