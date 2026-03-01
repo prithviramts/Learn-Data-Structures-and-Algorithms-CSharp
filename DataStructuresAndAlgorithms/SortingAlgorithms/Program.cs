@@ -111,10 +111,13 @@ namespace SortingAlgorithms
 
             #region CodeChef Solver
 
-            CodeChefSolver.SearchEleOfArray();
-            CodeChefSolver.FindMaximumInArray();
-            CodeChefSolver.TakeDiscOrNot();
-
+            //CodeChefSolver.SearchEleOfArray();
+            //CodeChefSolver.FindMaximumInArray();
+            //CodeChefSolver.TakeDiscOrNot();
+            //CodeChefSolver.CostOfGroceries();
+            
+            //CodeChefSolver.CheckArrIsSorted();
+            CodeChefSolver.CheckArrIsSortedOpt();
 
             #endregion
         }

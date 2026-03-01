@@ -107,5 +107,101 @@ namespace SortingAlgorithms
                 }
             }
         }
+
+        //Sample input
+
+        public static void CostOfGroceries()
+        {
+            int testCases = int.Parse(Console.ReadLine());
+            for (int t = 0; t < testCases; t++)
+            {
+                string[] firstLine = Console.ReadLine().Split();
+                int n = int.Parse(firstLine[0]);
+                int x = int.Parse(firstLine[1]);
+
+                int[] arrA = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                int[] arrB = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+                int totSum = 0;
+
+                for (int i = 0; i < n; i++)
+                {
+                    if (arrA[i] >= x)
+                    {
+                        totSum += arrB[i];
+                    }
+                }
+
+                Console.WriteLine(totSum);
+            }
+        }
+
+        // Sample input
+
+        public static void CheckArrIsSorted()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int count = 0;
+            bool isSorted = false;
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] <= arr[i+1])
+                {
+                    count++;
+                    isSorted = true;
+                }
+                else
+                    break;
+            }
+
+            for (int i = count + 1; i < n -1; i++)
+            {
+                if (arr[i] <= arr[i + 1])
+                {
+                    count++;
+                    isSorted = true;
+                }
+                else
+                {
+                    isSorted = false;
+                    break;
+                }
+            }
+
+            Console.WriteLine(isSorted);
+        }
+
+        public static void CheckArrIsSortedOpt()
+        {
+            int testCases = int.Parse(Console.ReadLine());
+            for (int t = 0;  t < testCases; t++)
+            {
+                int n = int.Parse(Console.ReadLine());
+                int[] arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                Console.WriteLine(Check(arr));
+            }
+
+            string Check(int[] arr)
+            {
+                int n = arr.Length;
+                int count = 0;
+                for (int i = 0; i < n; i++)
+                {
+                    if (arr[i] > arr[(i + 1)%n])
+                    {
+                        count++;
+                    }
+                }
+                if (count <=1)
+                {
+                    return "true";
+                }
+                else
+                {
+                    return "false"; 
+                }
+            }
+        }
     }
 }
