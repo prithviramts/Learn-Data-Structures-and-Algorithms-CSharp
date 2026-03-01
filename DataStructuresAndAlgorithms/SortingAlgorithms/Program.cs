@@ -86,7 +86,7 @@ namespace SortingAlgorithms
             LeetCodeSolver.PlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
             LeetCodeSolver.PlusOneOpt(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 
-            LeetCodeSolver.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1, 2, 3 }, 2);
+            //LeetCodeSolver.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1, 2, 3 }, 2);
 
             #endregion
 
@@ -112,6 +112,8 @@ namespace SortingAlgorithms
             #region CodeChef Solver
 
             CodeChefSolver.SearchEleOfArray();
+            CodeChefSolver.FindMaximumInArray();
+            CodeChefSolver.TakeDiscOrNot();
 
 
             #endregion

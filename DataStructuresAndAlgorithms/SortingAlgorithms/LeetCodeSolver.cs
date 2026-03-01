@@ -777,22 +777,22 @@ namespace SortingAlgorithms
 
         #region LEETCODE - 219 Contains Duplicate II
 
-        public static bool ContainsNearbyDuplicate(int[] nums, int k)
-        {
-            Dictionary<int, int> Duplicates = new Dictionary<int, int>();
-            Duplicates.Add(nums[0], 0);
-            for (int i = 1; i <= k; i++)
-            {
-                if (Duplicates.ContainsKey(nums[i]) == Duplicates.ContainsKey(nums[0]))
-                {
-                    if ()
-                    return true;
-                }
-            }
+        //public static bool ContainsNearbyDuplicate(int[] nums, int k)
+        //{
+        //    Dictionary<int, int> Duplicates = new Dictionary<int, int>();
+        //    Duplicates.Add(nums[0], 0);
+        //    for (int i = 1; i <= k; i++)
+        //    {
+        //        if (Duplicates.ContainsKey(nums[i]) == Duplicates.ContainsKey(nums[0]))
+        //        {
+        //            if ()
+        //            return true;
+        //        }
+        //    }
 
 
-            return false;
-        }
+        //    return false;
+        //}
 
         #endregion
     }

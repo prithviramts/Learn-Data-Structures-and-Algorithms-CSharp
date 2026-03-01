@@ -17,11 +17,11 @@ namespace SortingAlgorithms.LinkedLists
             AddFirst(new LinkedListNode<T>(value));
         }
 
-        private void AddFirst(Node<T> node)
+        private void AddFirst(LinkedListNode<T> node)
         {
             LinkedListNode<T> temp = Head;
             Head = node;
-            Head.Next = temp;
+            //Head.Next = temp;
 
             Count++;
 
