@@ -385,9 +385,25 @@ namespace SortingAlgorithms
 
         public static int FindNumbers(int[] nums)
         {
-            HashSet<int> result = new HashSet<int>();
+            int maxCount = 0;
 
-            return 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int count = 0;
+                int number = nums[i];
+                while (number > 0)
+                {
+                    int rem = number % 10;
+                    count++;
+                    number /= 10;
+                }
+                if (count % 2 == 0)
+                {
+                    maxCount++;
+                }
+            }
+
+            return maxCount;
         }
 
         #endregion
@@ -793,6 +809,28 @@ namespace SortingAlgorithms
 
         //    return false;
         //}
+
+        #endregion
+
+        //public static ListNode AddTwoNums(ListNode l1, ListNode l2)
+        //{
+        //}
+
+        #region LEETCODE - Duplicate Zeros
+
+        public static void DuplicateZeros(int[] arr)
+        {
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                if (arr[i] == 0)
+                {
+                    for (int j = arr.Length - 2; j >= i; j--)
+                    {
+                        arr[j + 1] = arr[j];
+                    }
+                }
+            }
+        }
 
         #endregion
     }

@@ -66,6 +66,7 @@ namespace SortingAlgorithms
             LeetCodeSolver.MaxProfit(new int[] { 7, 3, 1, 5, 8, 6 });
             LeetCodeSolver.ContainsDuplicate(new int[] { 7, 3, 1, 5, 8, 6, });
             LeetCodeSolver.MoveZeros(new int[] { 1, 0, 2, 3, 0, 12, 0, 3 });
+            LeetCodeSolver.FindNumbers(new int[] { 12, 345, 1, 6, 8790 });
 
             LeetCodeSolver.MissingNumber(new int[] { 9, 1, 7, 3, 6, 2, 5, 0, 4 });
             LeetCodeSolver.MissingNumberMath(new int[] { 9, 1, 7, 3, 6, 2, 5, 0, 4 });
@@ -85,6 +86,7 @@ namespace SortingAlgorithms
             LeetCodeSolver.SearchInsert(new int[] { 1, 3, 5, 6 }, 5);
             LeetCodeSolver.PlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
             LeetCodeSolver.PlusOneOpt(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
+            LeetCodeSolver.DuplicateZeros(new int[] { 9, 8, 0, 1, 2, 0, 5, 6 });
 
             //LeetCodeSolver.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1, 2, 3 }, 2);
 
