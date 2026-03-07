@@ -111,17 +111,27 @@ namespace SortingAlgorithms
 
             #endregion
 
+
+            #region LeetCodeSolverMed
+
+            LeetCodeSolverMed.TwoSum(new int[] {5, 25, 75 }, 100);
+
+            LeetCodeSolverMed.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 });
+
+            #endregion
+
             #region CodeChef Solver
 
             //CodeChefSolver.SearchEleOfArray();
             //CodeChefSolver.FindMaximumInArray();
             //CodeChefSolver.TakeDiscOrNot();
             //CodeChefSolver.CostOfGroceries();
-            
+
             //CodeChefSolver.CheckArrIsSorted();
             CodeChefSolver.CheckArrIsSortedOpt();
 
             #endregion
+
         }
     }
 }

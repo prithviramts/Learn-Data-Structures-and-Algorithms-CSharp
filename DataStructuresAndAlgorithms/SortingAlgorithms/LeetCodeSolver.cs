@@ -598,7 +598,7 @@ namespace SortingAlgorithms
         public static int[] ProductExceptSelf(int[] nums)
         {
             int[] answer = new int[nums.Length];
-            int leftProd = 0, rightProd = 0;
+            int leftProd = 0;
             int i = 0;
             if (nums[i] > 0)
             {
@@ -758,7 +758,7 @@ namespace SortingAlgorithms
                 resArr[len] = temp;
                 len--;
             }
-            
+
             return resArr;
         }
 
@@ -831,6 +831,21 @@ namespace SortingAlgorithms
                 }
             }
         }
+
+        #endregion
+
+        #region LEETCODE - Check if N and its Double exists
+
+        //public static bool CheckIfExist(int[] arr)
+        //{
+        //    Dictionary<int, int> Dict = new Dictionary<int, int>();
+        //    int i = 0;
+
+        //    for (int j = 1; j < arr.Length; j++)
+        //    {
+
+        //    }
+        //}
 
         #endregion
     }
