@@ -111,6 +111,11 @@ namespace SortingAlgorithms
 
             #endregion
 
+            #region
+
+            TwoPointers.ValidPalindrome("A man, a plan, a canal: Panama");
+
+            #endregion
 
             #region LeetCodeSolverMed
 
@@ -128,8 +133,9 @@ namespace SortingAlgorithms
             //CodeChefSolver.CostOfGroceries();
 
             //CodeChefSolver.CheckArrIsSorted();
-            CodeChefSolver.CheckArrIsSortedOpt();
+            //CodeChefSolver.CheckArrIsSortedOpt();
 
+            CodeChefSolver.MinToMax();
             #endregion
 
         }

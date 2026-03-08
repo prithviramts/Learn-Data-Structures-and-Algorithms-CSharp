@@ -203,5 +203,43 @@ namespace SortingAlgorithms
                 }
             }
         }
+
+        public static void MinToMax()
+        {
+            int t = int.Parse(Console.ReadLine()); // Read the number of test cases
+            while (t-- > 0)
+            {
+                int n = int.Parse(Console.ReadLine()); // Read the size of the array
+                int[] a = new int[n]; // Declare the array with size n
+
+                // Read the array elements in a single line
+                string[] input = Console.ReadLine().Split();
+                for (int i = 0; i < n; i++)
+                {
+                    a[i] = int.Parse(input[i]); // Parse the input elements into the array
+                }
+
+                // Your code goes here
+                int minVal = a[0];
+                int count = 0;
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (minVal > a[i])
+                    {
+                        minVal = a[i];
+                    }
+                }
+
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (minVal != a[i])
+                    {
+                        a[i] = minVal;
+                        count++;
+                    }
+                }
+                Console.WriteLine(count);
+            }
+        }
     }
 }
